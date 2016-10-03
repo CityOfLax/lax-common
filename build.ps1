@@ -60,7 +60,34 @@ Invoke-MSBuild
 $revision = @{ $true = $env:APPVEYOR_BUILD_NUMBER; $false = 1 }[$env:APPVEYOR_BUILD_NUMBER -ne $NULL];
 $revision = "CI{0:D4}" -f [convert]::ToInt32($revision, 10)
 
-$packagesToPublish = @("Lax.Data", "Lax.Data.EntityFramework")
+$packagesToPublish = @(
+    "Lax.Data", 
+    "Lax.Data.EntityFramework",
+    "Lax.Caching.Memory.Namespaced",
+    "Lax.Caching.Memory.Typed",
+    "Lax.DirectoryServices",
+    "Lax.Helpers.Booleans",
+    "Lax.Helpers.EffectiveDateEntity",
+    "Lax.Helpers.EntityTypeConfigurations"
+    "Lax.Helpers.EnumerationMapping",
+    "Lax.Helpers.Reflection.Enumerations",
+    "Lax.Helpers.Serialization.ByteArrays",
+    "Lax.Helpers.Serialization.Xml",
+    "Lax.Helpers.SoftlyDeletableEntity",
+    "Lax.Helpers.StringComparison",
+    "Lax.Helpers.StringManipulation",
+    "Lax.Helpers.TimePeriods",
+    "Lax.Mvc.AdminLte",
+    "Lax.Mvc.Bootstrap",
+    "Lax.Mvc.DataTables",
+    "Lax.Security.Authentication",
+    "Lax.Security.Authentication.CustomWindows",
+    "Lax.Security.Authentication.CustomWindows.Ldap",
+    "Lax.Security.Claims",
+    "Lax.Security.Claims.Ldap",
+    "Lax.TypeMapper",
+    "Lax.TypeMapper.AutoMapper"
+)
 
 foreach ($packageToPublish in $packagesToPublish) {
     $packageProjectPath = ".\src\" + $packageToPublish
