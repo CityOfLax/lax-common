@@ -67,9 +67,11 @@ $packagesToPublish = @(
     "Lax.Caching.Memory.Typed",
     "Lax.DirectoryServices",
     "Lax.Helpers.Booleans",
+    "Lax.Helpers.CryptographicRandomStrings",
     "Lax.Helpers.EffectiveDateEntity",
     "Lax.Helpers.EntityTypeConfigurations"
     "Lax.Helpers.EnumerationMapping",
+    "Lax.Helpers.PasswordHashing",
     "Lax.Helpers.Reflection.Enumerations",
     "Lax.Helpers.Serialization.ByteArrays",
     "Lax.Helpers.Serialization.Xml",
