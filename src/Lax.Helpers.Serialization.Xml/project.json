@@ -1,0 +1,17 @@
+﻿{
+  "version": "1.0.0-*",
+
+  "dependencies": {
+    "Lax.Helpers.Serialization.ByteArrays": "1.0.0-*",
+    "NETStandard.Library": "1.6.0"
+  },
+
+  "frameworks": {
+    "net452": {
+      "frameworkAssemblies": {
+        "System.Xml.Serialization": "4.0.0.0",
+        "System.Xml": "4.0.0.0" 
+      }
+    } 
+  }
+}
