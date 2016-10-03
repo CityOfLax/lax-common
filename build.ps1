@@ -63,7 +63,7 @@ $revision = "{0:D4}" -f [convert]::ToInt32($revision, 10)
 $packagesToPublish = @("Lax.Data", "Lax.Data.EntityFramework")
 
 foreach ($packageToPublish in $packagesToPublish) {
-    $packageProjectPath = ".\src\" + $packagesToPublish
+    $packageProjectPath = ".\src\" + $packageToPublish
     exec { & dotnet pack $packageProjectPath -c Release -o .\artifacts --version-suffix=$revision }  
 }
 
