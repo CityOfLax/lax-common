@@ -62,6 +62,7 @@ $revision = "CI{0:D4}" -f [convert]::ToInt32($revision, 10)
 
 $packagesToPublish = @(
     "Lax.Data", 
+    "Lax.Data.Dapper",
     "Lax.Data.EntityFramework",
     "Lax.Caching.Memory.Namespaced",
     "Lax.Caching.Memory.Typed",

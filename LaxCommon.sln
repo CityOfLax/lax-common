@@ -93,6 +93,8 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Lax.Helpers.PasswordHashing
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Lax.Helpers.CryptographicRandomStrings", "src\Lax.Helpers.CryptographicRandomStrings\Lax.Helpers.CryptographicRandomStrings.xproj", "{ED385A54-75D8-42A7-90D9-A933533675F6}"
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Lax.Data.Dapper", "src\Lax.Data.Dapper\Lax.Data.Dapper.xproj", "{D0CF04AF-E24D-4E4A-935A-3B88D5D4F311}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -215,6 +217,10 @@ Global
 		{ED385A54-75D8-42A7-90D9-A933533675F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED385A54-75D8-42A7-90D9-A933533675F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED385A54-75D8-42A7-90D9-A933533675F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0CF04AF-E24D-4E4A-935A-3B88D5D4F311}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0CF04AF-E24D-4E4A-935A-3B88D5D4F311}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0CF04AF-E24D-4E4A-935A-3B88D5D4F311}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0CF04AF-E24D-4E4A-935A-3B88D5D4F311}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -260,5 +266,6 @@ Global
 		{D38D3CB6-2A79-4064-91B7-0992FEF729B6} = {5055AF87-1D1F-4C0F-9379-E9099246B009}
 		{EC4A18D4-E485-4783-9E13-0387F245BFF6} = {487B904F-626C-43CA-A044-953B64BD26AE}
 		{ED385A54-75D8-42A7-90D9-A933533675F6} = {487B904F-626C-43CA-A044-953B64BD26AE}
+		{D0CF04AF-E24D-4E4A-935A-3B88D5D4F311} = {0F54BF03-5068-4067-9CBB-A455A61EC5F6}
 	EndGlobalSection
 EndGlobal

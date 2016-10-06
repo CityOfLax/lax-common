@@ -1,17 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq.Expressions;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Lax.Data {
 
-    public interface IRepository<TEntity> {
-
-        Task<IEnumerable<TEntity>> GetAllAsync();
-
-        Task<IEnumerable<TEntity>> GetAllAsync(Expression<Func<TEntity, bool>> predicate);
-
-        Task<TEntity> GetAsync(Expression<Func<TEntity, bool>> predicate);
+    public interface IRepository<TEntity> : IReadOnlyRepository<TEntity> {
 
         void Add(TEntity entity);
 
