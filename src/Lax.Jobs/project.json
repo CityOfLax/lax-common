@@ -1,0 +1,16 @@
+﻿{
+  "version": "1.0.0-*",
+
+  "dependencies": {
+    "Lax.Jobs.Abstractions": "1.0.0-*",
+    "Microsoft.Extensions.DependencyInjection": "1.0.0"
+  },
+
+  "frameworks": {
+    "net452": {
+      "frameworkAssemblies": {
+        "System.Runtime": "4.0.0" 
+      }
+    } 
+  }
+}
