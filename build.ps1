@@ -81,6 +81,8 @@ $packagesToPublish = @(
     "Lax.Helpers.StringComparison",
     "Lax.Helpers.StringManipulation",
     "Lax.Helpers.TimePeriods",
+    "Lax.Jobs.Runner",
+    "Lax.Jobs.Runner.Synchronous",
     "Lax.Jobs",
     "Lax.Jobs.Abstractions",
     "Lax.Mvc.AdminLte",

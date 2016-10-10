@@ -1,0 +1,11 @@
+﻿{
+  "version": "1.0.0-*",
+
+  "dependencies": {
+    "Lax.Jobs.Abstractions": "1.0.0-*"
+  },
+
+  "frameworks": {
+    "net452": {} 
+  }
+}

@@ -1,0 +1,16 @@
+﻿{
+  "version": "1.0.0-*",
+
+  "dependencies": {
+    "Lax.Jobs.Runner": "1.0.0-*",
+    "Lax.Jobs": "1.0.0-*" 
+  },
+
+  "frameworks": {
+    "net452": {
+      "frameworkAssemblies": {
+        "System.Runtime": "4.0.10" 
+      }
+    } 
+  }
+}
