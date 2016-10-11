@@ -70,6 +70,7 @@ $packagesToPublish = @(
     "Lax.DirectoryServices",
     "Lax.Helpers.Booleans",
     "Lax.Helpers.CryptographicRandomStrings",
+    "Lax.Helpers.DateTimes",
     "Lax.Helpers.EffectiveDateEntity",
     "Lax.Helpers.EntityTypeConfigurations"
     "Lax.Helpers.EnumerationMapping",
