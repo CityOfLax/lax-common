@@ -113,6 +113,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Runner", "Runner", "{AB2883
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Lax.Helpers.DateTimes", "src\Lax.Helpers.DateTimes\Lax.Helpers.DateTimes.xproj", "{7535CFE7-E5E3-4504-951A-B576F9404530}"
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Lax.Data.EntityFrameworkCore", "src\Lax.Data.EntityFrameworkCore\Lax.Data.EntityFrameworkCore.xproj", "{26FC4D23-FBEB-441E-BD38-A554160B532A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -263,6 +265,10 @@ Global
 		{7535CFE7-E5E3-4504-951A-B576F9404530}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7535CFE7-E5E3-4504-951A-B576F9404530}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7535CFE7-E5E3-4504-951A-B576F9404530}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26FC4D23-FBEB-441E-BD38-A554160B532A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26FC4D23-FBEB-441E-BD38-A554160B532A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26FC4D23-FBEB-441E-BD38-A554160B532A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26FC4D23-FBEB-441E-BD38-A554160B532A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -318,5 +324,6 @@ Global
 		{2CDBE2EB-033B-469F-A0D1-39F39FD36A5F} = {AB288308-0E0E-448D-B899-7C9DF9ED6B5F}
 		{AB288308-0E0E-448D-B899-7C9DF9ED6B5F} = {4804EE1D-7C2B-4CEE-B604-718E894FE384}
 		{7535CFE7-E5E3-4504-951A-B576F9404530} = {487B904F-626C-43CA-A044-953B64BD26AE}
+		{26FC4D23-FBEB-441E-BD38-A554160B532A} = {0F54BF03-5068-4067-9CBB-A455A61EC5F6}
 	EndGlobalSection
 EndGlobal

@@ -64,6 +64,7 @@ $packagesToPublish = @(
     "Lax.Data", 
     "Lax.Data.Dapper",
     "Lax.Data.EntityFramework",
+    "Lax.Data.EntityFrameworkCore",
     "Lax.Caching.Memory.Namespaced",
     "Lax.Caching.Memory.Typed",
     "Lax.Console.Hosting",

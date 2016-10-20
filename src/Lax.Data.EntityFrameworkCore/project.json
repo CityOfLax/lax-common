@@ -1,9 +1,9 @@
-{
+﻿{
   "version": "1.0.0-*",
 
   "dependencies": {
     "Lax.Data": "1.0.0-*",
-    "Dapper": "1.50.2"
+    "Microsoft.EntityFrameworkCore.SqlServer": "1.0.1-*"
   },
 
   "frameworks": {
