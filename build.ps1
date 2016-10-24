@@ -72,6 +72,7 @@ $packagesToPublish = @(
     "Lax.Helpers.Booleans",
     "Lax.Helpers.CryptographicRandomStrings",
     "Lax.Helpers.DateTimes",
+    "Lax.Helpers.Decimals",
     "Lax.Helpers.EffectiveDateEntity",
     "Lax.Helpers.EntityTypeConfigurations"
     "Lax.Helpers.EnumerationMapping",
