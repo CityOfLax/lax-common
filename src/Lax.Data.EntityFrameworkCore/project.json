@@ -9,6 +9,10 @@
 
   "frameworks": {
     "net452": {},
-    "netstandard1.5": {}
+    "netstandard1.5": {
+      "dependencies": {
+        "System.Linq": "4.1.0-*"
+      }
+    }
   }
 }
