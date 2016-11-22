@@ -3,8 +3,9 @@
 
   "dependencies": {
     "Lax.Jobs.Abstractions": "1.0.0-*",
-    "Microsoft.Extensions.DependencyInjection": "1.0.0",
-    "Microsoft.Extensions.DependencyInjection.Abstractions": "1.0.0"
+    "Microsoft.Extensions.DependencyInjection": "1.1.0",
+    "Microsoft.Extensions.DependencyInjection.Abstractions": "1.1.0",
+    "NETStandard.Library": "1.6.1"
   },
 
   "frameworks": {
@@ -12,6 +13,7 @@
       "frameworkAssemblies": {
         "System.Runtime": "4.0.10" 
       }
-    } 
+    },
+    "netstandard1.6": {}
   }
 }

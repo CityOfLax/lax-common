@@ -4,7 +4,7 @@
   "dependencies": {
     "Lax.Helpers.SoftlyDeletableEntity": "1.0.0-*",
     "Lax.Helpers.TimePeriods": "1.0.0-*",
-    "NETStandard.Library": "1.6.0"
+    "NETStandard.Library": "1.6.1"
   },
 
   "frameworks": {

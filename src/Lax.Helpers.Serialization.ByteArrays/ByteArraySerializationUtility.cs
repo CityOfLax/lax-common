@@ -5,10 +5,10 @@ namespace Lax.Helpers.Serialization.ByteArrays {
     public static class ByteArraySerializationUtility {
 
         public static byte[] SerializeDefaultStringToByteArray(string value) =>
-            Encoding.Default.GetBytes(value);
+            SerializeUTF8StringToByteArray(value);
 
         public static string SerializeByteArrayToDefaultString(byte[] value) =>
-            Encoding.Default.GetString(value);
+            SerializeByteArrayToUTF8String(value);
 
         public static byte[] SerializeUTF8StringToByteArray(string value) =>
             Encoding.UTF8.GetBytes(value);

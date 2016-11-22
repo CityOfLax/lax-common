@@ -19,7 +19,7 @@ namespace Lax.Helpers.CryptographicRandomStrings {
             // Guid.NewGuid and System.Random are not particularly random. By using a
             // cryptographically-secure random number generator, the caller is always
             // protected, regardless of use.
-            using (var rng = new System.Security.Cryptography.RNGCryptoServiceProvider()) {
+            using (var rng = System.Security.Cryptography.RandomNumberGenerator.Create()) {
                 var result = new StringBuilder();
                 var buf = new byte[128];
                 while (result.Length < length) {

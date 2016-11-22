@@ -1,4 +1,6 @@
-﻿namespace Lax.Caching.Memory.Namespaced {
+﻿using System.Reflection;
+
+namespace Lax.Caching.Memory.Namespaced {
 
     internal class NamespacedMemoryCacheEntryKey<TKey, TValue> {
         

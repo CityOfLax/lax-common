@@ -2,14 +2,15 @@
   "version": "1.0.0-*",
 
   "dependencies": {
-    "NETStandard.Library": "1.6.0",
-    "Microsoft.AspNetCore.Http": "1.0.0-*",
+    "NETStandard.Library": "1.6.1",
+    "Microsoft.AspNetCore.Http": "1.1.0",
     "Lax.Security.Claims": "1.0.0-*",
     "Lax.Security.Authentication": "1.0.0-*",
     "Lax.Caching.Memory.Namespaced": "1.0.0-*"
   },
 
   "frameworks": {
-    "net452" :  {} 
+    "net452" :  {},
+    "netstandard1.6": {}
   }
 }
