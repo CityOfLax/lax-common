@@ -31,7 +31,7 @@ namespace Lax.Mvc.AdminLte {
                 + $"<span class='info-box-number'>{ProgressNumerator.ToString("F0")}/{ProgressDenominator.ToString("F0")}</span>"
                 + $"<div class='progress'><div class='progress-bar' style='width: {progress.ToString("F0")}%;'></div>"
                 + $"</div><div class='info-box-more'><span class='pull-right'>{progress.ToString("F0")}%</span>"
-                + "</div></div></div>";
+                + "</div></div>";
 
             output.Content.SetHtmlContent(htmlContent);
 
