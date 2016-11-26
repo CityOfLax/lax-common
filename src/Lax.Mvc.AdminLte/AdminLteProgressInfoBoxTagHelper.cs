@@ -5,8 +5,8 @@ namespace Lax.Mvc.AdminLte {
     [HtmlTargetElement("lte-progress-info-box")]
     public class AdminLteProgressInfoBoxTagHelper : TagHelper {
 
-        [HtmlAttributeName("box-type")]
-        public string BoxType { get; set; } = "default";
+        [HtmlAttributeName("box-bg-color")]
+        public string BoxBackgroundColor { get; set; } = "green";
 
         [HtmlAttributeName("box-icon")]
         public string BoxIcon { get; set; } = "";
@@ -33,9 +33,9 @@ namespace Lax.Mvc.AdminLte {
                 + $"</div><div class='info-box-more'><span class='pull-right'>{progress.ToString("F0")}%</span>"
                 + "</div></div></div>";
 
-            output.Content.SetHtmlContent("");
+            output.Content.SetHtmlContent(htmlContent);
 
-            output.Attributes.SetAttribute("class",$"info-box bg-{BoxType}");
+            output.Attributes.SetAttribute("class",$"info-box bg-{BoxBackgroundColor}");
 
             output.TagMode = TagMode.StartTagAndEndTag;
 
