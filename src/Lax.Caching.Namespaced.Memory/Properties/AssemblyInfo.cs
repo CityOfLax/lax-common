@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 // associated with an assembly.
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Lax.Caching.Memory.Typed")]
+[assembly: AssemblyProduct("Lax.Caching.Namespaced.Memory")]
 [assembly: AssemblyTrademark("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible
@@ -16,4 +16,4 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("2adf6983-33ab-4677-8ba0-671caecbeea9")]
+[assembly: Guid("603adffb-6161-43e9-9129-0ff9859ff455")]

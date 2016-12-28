@@ -7,11 +7,11 @@
 
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.Props" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup Label="Globals">
-    <ProjectGuid>2adf6983-33ab-4677-8ba0-671caecbeea9</ProjectGuid>
-    <RootNamespace>Lax.Caching.Memory.Typed</RootNamespace>
+    <ProjectGuid>603adffb-6161-43e9-9129-0ff9859ff455</ProjectGuid>
+    <RootNamespace>Lax.Caching.Namespaced.Memory</RootNamespace>
     <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)'=='' ">.\obj</BaseIntermediateOutputPath>
     <OutputPath Condition="'$(OutputPath)'=='' ">.\bin\</OutputPath>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
   </PropertyGroup>
 
   <PropertyGroup>
