@@ -8,8 +8,11 @@ namespace Lax.Caching.Namespaced.Memory {
 
         private readonly IMemoryCache _memoryCache;
 
-        public MemoryNamespacedCache(string namespc, IMemoryCache memoryCache) : base(namespc) {
+        private readonly TimeSpan _expiration;
+
+        public MemoryNamespacedCache(string namespc, TimeSpan expiration, IMemoryCache memoryCache) : base(namespc) {
             _memoryCache = memoryCache;
+            _expiration = expiration;
         }
 
         public override async Task<bool> ExistsAsync(TKey key) {
@@ -24,10 +27,10 @@ namespace Lax.Caching.Namespaced.Memory {
         public override async Task<TValue> GetAsync(TKey key) =>
             await Task.FromResult(_memoryCache.Get<TValue>(new MemoryNamespacedCacheEntryKey<TKey, TValue>(Namespc, key)));
 
-        public override async Task SetAsync(TKey key, TValue value, TimeSpan expiration) {
+        public override async Task SetAsync(TKey key, TValue value) {
             await
                 Task.FromResult(_memoryCache.Set(new MemoryNamespacedCacheEntryKey<TKey, TValue>(Namespc, key), value,
-                    new MemoryCacheEntryOptions().SetAbsoluteExpiration(expiration)));
+                    new MemoryCacheEntryOptions().SetAbsoluteExpiration(_expiration)));
         }
 
         public override async Task FlushAsync(TKey key) {

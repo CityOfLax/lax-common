@@ -9,7 +9,7 @@ namespace Lax.Caching {
 
         Task<TValue> GetAsync(TKey key);
 
-        Task SetAsync(TKey key, TValue value, TimeSpan expiration);
+        Task SetAsync(TKey key, TValue value);
 
         Task FlushAsync(TKey key);
 

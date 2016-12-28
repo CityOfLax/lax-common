@@ -15,7 +15,7 @@ namespace Lax.Caching.Namespaced {
 
         public abstract Task<TValue> GetAsync(TKey key);
 
-        public abstract Task SetAsync(TKey key, TValue value, TimeSpan expiration);
+        public abstract Task SetAsync(TKey key, TValue value);
 
         public abstract Task FlushAsync(TKey key);
 
