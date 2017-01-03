@@ -11,8 +11,7 @@ namespace Lax.Security.Authentication.CustomWindows {
             if (services == null) {
                 throw new ArgumentNullException(nameof(services));
             }
-
-            services.AddMemoryCache();
+            
             services.AddOptions();
             services.TryAdd(ServiceDescriptor.Transient<ICustomWindowsClaimsProvider<TUser>, CustomWindowsClaimsProvider<TUser>>());
 

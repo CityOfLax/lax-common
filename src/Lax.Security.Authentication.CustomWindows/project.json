@@ -6,7 +6,7 @@
     "Microsoft.AspNetCore.Http": "1.1.0",
     "Lax.Security.Claims": "1.0.0-*",
     "Lax.Security.Authentication": "1.0.0-*",
-    "Lax.Caching.Memory.Namespaced": "1.0.0-*"
+    "Lax.Caching": "1.0.0-*"
   },
 
   "frameworks": {
