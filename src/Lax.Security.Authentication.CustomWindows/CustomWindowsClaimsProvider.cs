@@ -4,6 +4,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Options;
 
 namespace Lax.Security.Authentication.CustomWindows {
@@ -12,11 +13,11 @@ namespace Lax.Security.Authentication.CustomWindows {
 
         private readonly CustomWindowsClaimsProviderOptions<TUser> _customWindowsClaimsProviderOptions;
 
-        private readonly ICustomWindowsClaimsCache<TUser> _namespacedMemoryCache;
+        private readonly IMemoryCache _namespacedMemoryCache;
 
         public CustomWindowsClaimsProvider(
             IOptions<CustomWindowsClaimsProviderOptions<TUser>> customWindowsClaimsProviderOptionsAccessor,
-            ICustomWindowsClaimsCache<TUser> namespacedMemoryCache) {
+            IMemoryCache namespacedMemoryCache) {
 
             _customWindowsClaimsProviderOptions = customWindowsClaimsProviderOptionsAccessor.Value;
             _namespacedMemoryCache = namespacedMemoryCache;
@@ -32,13 +33,13 @@ namespace Lax.Security.Authentication.CustomWindows {
 
         public async Task<IEnumerable<Claim>> GetClaimsForUserAsync(TUser user, HttpContext context) {
             var claims =
-                await _namespacedMemoryCache.GetAsync(user);
+                _namespacedMemoryCache.Get<IEnumerable<Claim>>(user);
 
             if (claims == null) {
 
                 claims = await GetClaimsForUserFromBackingStoresAsync(user, context);
 
-                await _namespacedMemoryCache.SetAsync(user, claims);
+                _namespacedMemoryCache.Set(user, claims);
 
             }
 

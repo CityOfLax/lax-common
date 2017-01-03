@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace Lax.Security.Authentication.CustomWindows {
 
@@ -7,11 +8,11 @@ namespace Lax.Security.Authentication.CustomWindows {
 
         private readonly ICustomUserProvider<TUser> _customUserProvider;
 
-        private readonly ICustomWindowsUserCache<TUser> _userCache;
+        private readonly IMemoryCache _userCache;
 
         public CustomWindowsUserProvider(
             ICustomUserProvider<TUser> customUserProvider,
-            ICustomWindowsUserCache<TUser> userCache) {
+            IMemoryCache userCache) {
 
             _customUserProvider = customUserProvider;
             _userCache = userCache;
@@ -19,7 +20,7 @@ namespace Lax.Security.Authentication.CustomWindows {
 
         public async Task<TUser> GetUserForWindowsPrimarySidAsync(string windowsPrimarySid) {
 
-            var cachedUser = await _userCache.GetAsync(windowsPrimarySid);
+            var cachedUser = _userCache.Get<TUser>(windowsPrimarySid);
 
             if (cachedUser == null) {
 
@@ -27,7 +28,7 @@ namespace Lax.Security.Authentication.CustomWindows {
 
                 if (cachedUser != null) {
 
-                    await _userCache.SetAsync(windowsPrimarySid, cachedUser);
+                    _userCache.Set(windowsPrimarySid, cachedUser);
 
                 }
 
