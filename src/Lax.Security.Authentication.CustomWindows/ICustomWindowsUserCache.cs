@@ -2,7 +2,7 @@
 
 namespace Lax.Security.Authentication.CustomWindows {
 
-    public interface ICustomWindowsAuthenticationCache<TUser> : ICache<string, TUser> {
+    public interface ICustomWindowsUserCache<TUser> : ICache<string, TUser> {
 
         
 

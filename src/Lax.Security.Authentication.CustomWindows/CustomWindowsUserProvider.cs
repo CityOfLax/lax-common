@@ -7,11 +7,11 @@ namespace Lax.Security.Authentication.CustomWindows {
 
         private readonly ICustomUserProvider<TUser> _customUserProvider;
 
-        private readonly ICustomWindowsAuthenticationCache<TUser> _userCache;
+        private readonly ICustomWindowsUserCache<TUser> _userCache;
 
         public CustomWindowsUserProvider(
             ICustomUserProvider<TUser> customUserProvider,
-            ICustomWindowsAuthenticationCache<TUser> userCache) {
+            ICustomWindowsUserCache<TUser> userCache) {
 
             _customUserProvider = customUserProvider;
             _userCache = userCache;
