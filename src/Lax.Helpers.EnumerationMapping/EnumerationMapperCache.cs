@@ -35,9 +35,10 @@ namespace Lax.Helpers.EnumerationMapping {
                     _cache[cacheKey].Add(sourceValue, mappedValue);
 
                 }
-            }
 
-            return (TDestination) _cache[cacheKey][sourceValue];
+                return (TDestination)_cache[cacheKey][sourceValue];
+
+            }
 
         }
 
