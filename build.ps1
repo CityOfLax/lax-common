@@ -95,6 +95,7 @@ $packagesToPublish = @(
     "Lax.Mvc.AdminLte",
     "Lax.Mvc.Bootstrap",
     "Lax.Mvc.DataTables",
+	"Lax.Mvc.Features",
     "Lax.Security.Authentication",
     "Lax.Security.Authentication.CustomWindows",
     "Lax.Security.Claims",
