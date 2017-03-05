@@ -93,6 +93,7 @@ $packagesToPublish = @(
     "Lax.Jobs.Runner.Synchronous",
     "Lax.Jobs",
     "Lax.Jobs.Abstractions",
+	"Lax.Jobs.Hangfire.Autofac",
     "Lax.Mvc.AdminLte",
     "Lax.Mvc.Bootstrap",
     "Lax.Mvc.DataTables",
