@@ -57,8 +57,6 @@ $dotnetVersion = Get-Content $dotnetVersionFile
 
 & "$PSScriptRoot\dotnet-install.ps1" -Channel $dotnetChannel -Version $dotnetVersion -Architecture x64
 
-dotnet -v
-
 exec { & dotnet restore }
 
 $revision = @{ $true = $env:APPVEYOR_BUILD_NUMBER; $false = 1 }[$env:APPVEYOR_BUILD_NUMBER -ne $NULL];
