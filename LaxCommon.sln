@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5055AF87-1D1F-4C0F-9379-E9099246B009}"
 EndProject
@@ -9,57 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		appveyor.yml = appveyor.yml
 		build.ps1 = build.ps1
-		global.json = global.json
 		Readme.md = Readme.md
 	EndProjectSection
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Lax.Data", "src\Lax.Data\Lax.Data.xproj", "{8E6F73BD-6210-4897-96FA-541DB5517EE3}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Lax.Data.EntityFramework", "src\Lax.Data.EntityFramework\Lax.Data.EntityFramework.xproj", "{13EF4BFF-692C-4C94-925A-332F424E408F}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Lax.DirectoryServices", "src\Lax.DirectoryServices\Lax.DirectoryServices.xproj", "{BFBCE715-A4B2-46BE-98AF-B64EAF54A35E}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Lax.Helpers.Booleans", "src\Lax.Helpers.Booleans\Lax.Helpers.Booleans.xproj", "{2493D676-5336-4EF1-8ADB-513F74C9F45E}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Lax.Helpers.EffectiveDateEntity", "src\Lax.Helpers.EffectiveDateEntity\Lax.Helpers.EffectiveDateEntity.xproj", "{6883D90D-10D7-4F93-ADB3-34AFDD68BF8D}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Lax.Helpers.SoftlyDeletableEntity", "src\Lax.Helpers.SoftlyDeletableEntity\Lax.Helpers.SoftlyDeletableEntity.xproj", "{BBE32286-164A-4037-A744-F5A1A53F47BF}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Lax.Helpers.TimePeriods", "src\Lax.Helpers.TimePeriods\Lax.Helpers.TimePeriods.xproj", "{58C6F2ED-C2F4-470A-B3F6-784476DC15DB}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Lax.Helpers.EntityTypeConfigurations", "src\Lax.Helpers.EntityTypeConfigurations\Lax.Helpers.EntityTypeConfigurations.xproj", "{4A8154A8-4B4E-4653-8474-A1ABACB842A8}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Lax.Helpers.EnumerationMapping", "src\Lax.Helpers.EnumerationMapping\Lax.Helpers.EnumerationMapping.xproj", "{8B0249FB-E9CC-4024-95D9-7A64AA400ACB}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Lax.Helpers.Reflection.Enumerations", "src\Lax.Helpers.Reflection.Enumerations\Lax.Helpers.Reflection.Enumerations.xproj", "{3198FC7D-D2B5-4EF7-B084-CC23D3E7BE81}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Lax.Helpers.Serialization.ByteArrays", "src\Lax.Helpers.Serialization.ByteArrays\Lax.Helpers.Serialization.ByteArrays.xproj", "{A1ADF31C-48DD-4EFE-A8F1-856CE33377D8}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Lax.Helpers.Serialization.Xml", "src\Lax.Helpers.Serialization.Xml\Lax.Helpers.Serialization.Xml.xproj", "{DE3A6F1B-D6FD-4846-911B-4A0BA2B2F72D}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Lax.Helpers.StringComparison", "src\Lax.Helpers.StringComparison\Lax.Helpers.StringComparison.xproj", "{CAB236F5-0CFD-463B-A9C7-A3894B2EC939}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Lax.Helpers.StringManipulation", "src\Lax.Helpers.StringManipulation\Lax.Helpers.StringManipulation.xproj", "{6DDFF2C8-B768-4D41-8E07-1C2337831DAF}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Lax.Mvc.AdminLte", "src\Lax.Mvc.AdminLte\Lax.Mvc.AdminLte.xproj", "{FAAD564A-804F-4DF9-BAD8-FF8846732173}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Lax.Mvc.Bootstrap", "src\Lax.Mvc.Bootstrap\Lax.Mvc.Bootstrap.xproj", "{C270B504-3657-47DC-9FD0-1A7FEDE4E64C}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Lax.Mvc.DataTables", "src\Lax.Mvc.DataTables\Lax.Mvc.DataTables.xproj", "{85382DA7-DCD0-460B-87E6-724F9B0BD1C4}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Lax.Security.Authentication", "src\Lax.Security.Authentication\Lax.Security.Authentication.xproj", "{ED558830-CC78-43C3-8360-2DBE04D7DE1E}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Lax.Security.Authentication.CustomWindows", "src\Lax.Security.Authentication.CustomWindows\Lax.Security.Authentication.CustomWindows.xproj", "{9236E5FF-6386-4342-B415-F55EE634645F}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Lax.Security.Claims", "src\Lax.Security.Claims\Lax.Security.Claims.xproj", "{92056324-7652-4959-B170-609825CA265B}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Lax.Security.Claims.Ldap", "src\Lax.Security.Claims.Ldap\Lax.Security.Claims.Ldap.xproj", "{2DBBFEE7-07EE-463B-962B-957F19262601}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Lax.TypeMapper", "src\Lax.TypeMapper\Lax.TypeMapper.xproj", "{E41AFFF9-0C37-45FA-919D-75EFDE53C969}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Lax.TypeMapper.AutoMapper", "src\Lax.TypeMapper.AutoMapper\Lax.TypeMapper.AutoMapper.xproj", "{8C945FEA-EA37-49FC-8DBF-12E79BA5DC1B}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "LaxCommon", "src\LaxCommon\LaxCommon.xproj", "{00EAEE4B-373C-4588-91BC-D8F6D258A3AA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Caching", "Caching", "{FA5CF95A-5D3D-401C-A82B-63789D8A9076}"
 EndProject
@@ -81,61 +32,109 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Claims", "Claims", "{E3F6DA
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TypeMapper", "TypeMapper", "{D38D3CB6-2A79-4064-91B7-0992FEF729B6}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Lax.Helpers.PasswordHashing", "src\Lax.Helpers.PasswordHashing\Lax.Helpers.PasswordHashing.xproj", "{EC4A18D4-E485-4783-9E13-0387F245BFF6}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Lax.Helpers.CryptographicRandomStrings", "src\Lax.Helpers.CryptographicRandomStrings\Lax.Helpers.CryptographicRandomStrings.xproj", "{ED385A54-75D8-42A7-90D9-A933533675F6}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Lax.Data.Dapper", "src\Lax.Data.Dapper\Lax.Data.Dapper.xproj", "{D0CF04AF-E24D-4E4A-935A-3B88D5D4F311}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Lax.Console.Hosting", "src\Lax.Console.Hosting\Lax.Console.Hosting.xproj", "{F017BDD2-277E-436D-A7E8-FF2EB6CDA4C0}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Console", "Console", "{A120BB9C-D133-4BEF-AF56-7F5AFBC27376}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Lax.Jobs.Abstractions", "src\Lax.Jobs.Abstractions\Lax.Jobs.Abstractions.xproj", "{9545408A-0657-47A9-9219-91702A19F328}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Jobs", "Jobs", "{4804EE1D-7C2B-4CEE-B604-718E894FE384}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Lax.Jobs", "src\Lax.Jobs\Lax.Jobs.xproj", "{BA00D330-3890-4E9F-8766-15ECACCD55B6}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Lax.Jobs.Runner", "src\Lax.Jobs.Runner\Lax.Jobs.Runner.xproj", "{FF729992-056F-4C5E-BB2A-92EE99BF0006}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Lax.Jobs.Runner.Synchronous", "src\Lax.Jobs.Runner.Synchronous\Lax.Jobs.Runner.Synchronous.xproj", "{2CDBE2EB-033B-469F-A0D1-39F39FD36A5F}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Runner", "Runner", "{AB288308-0E0E-448D-B899-7C9DF9ED6B5F}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Lax.Helpers.DateTimes", "src\Lax.Helpers.DateTimes\Lax.Helpers.DateTimes.xproj", "{7535CFE7-E5E3-4504-951A-B576F9404530}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Lax.Data.EntityFrameworkCore", "src\Lax.Data.EntityFrameworkCore\Lax.Data.EntityFrameworkCore.xproj", "{26FC4D23-FBEB-441E-BD38-A554160B532A}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Lax.Helpers.Decimals", "src\Lax.Helpers.Decimals\Lax.Helpers.Decimals.xproj", "{FC1E15B7-460C-418C-A145-984E427E09F7}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Lax.Caching.Namespaced", "src\Lax.Caching.Namespaced\Lax.Caching.Namespaced.xproj", "{59910836-31DB-41F0-8A10-1324DED01CDE}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Lax.Caching", "src\Lax.Caching\Lax.Caching.xproj", "{71BF17C7-0A9D-4FEB-A39D-D5D8C8A04F1F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Namespaced", "Namespaced", "{89425061-36F5-417C-8013-AE97222C0645}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Lax.Caching.Namespaced.Memory", "src\Lax.Caching.Namespaced.Memory\Lax.Caching.Namespaced.Memory.xproj", "{603ADFFB-6161-43E9-9129-0FF9859FF455}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Lax.Data.Repository", "src\Lax.Data.Repository\Lax.Data.Repository.xproj", "{572A4F71-23A7-4616-820E-195C475963DF}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Lax.Data.Repository.Cached", "src\Lax.Data.Repository.Cached\Lax.Data.Repository.Cached.xproj", "{03488E35-A447-47BF-82D6-22A9C84ADAEE}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repository", "Repository", "{9721EC0B-3989-4DCF-998C-A268CC0FFDC5}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Lax.AspNet.Session.SerializationHelpers.Json", "src\Lax.AspNet.Session.SerializationHelpers.Json\Lax.AspNet.Session.SerializationHelpers.Json.xproj", "{4B72373E-A2EA-418A-BD7C-D10FAF9B2F05}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNet", "AspNet", "{2508AF44-4B16-4658-9C41-89563B553CAA}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Lax.Mvc.Features", "src\Lax.Mvc.Features\Lax.Mvc.Features.xproj", "{2A13DC0F-80BF-4634-812F-2496722CDF60}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Lax.Data.EntityFrameworkCore.Configuration", "src\Lax.Data.EntityFrameworkCore.Configuration\Lax.Data.EntityFrameworkCore.Configuration.xproj", "{B56D097E-8361-42F6-B473-0051042F66D1}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EntityFrameworkCore", "EntityFrameworkCore", "{5467B215-66DA-4FD2-8790-8E666A44E9D3}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Lax.Jobs.Hangfire.Autofac", "src\Lax.Jobs.Hangfire.Autofac\Lax.Jobs.Hangfire.Autofac.xproj", "{6B166953-459A-48E3-B089-0935DDF11F66}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hangfire", "Hangfire", "{18B31964-0201-4424-8749-E20C84C66234}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lax.Data", "src\Lax.Data\Lax.Data.csproj", "{8E6F73BD-6210-4897-96FA-541DB5517EE3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lax.Data.EntityFramework", "src\Lax.Data.EntityFramework\Lax.Data.EntityFramework.csproj", "{13EF4BFF-692C-4C94-925A-332F424E408F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lax.DirectoryServices", "src\Lax.DirectoryServices\Lax.DirectoryServices.csproj", "{BFBCE715-A4B2-46BE-98AF-B64EAF54A35E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lax.Helpers.Booleans", "src\Lax.Helpers.Booleans\Lax.Helpers.Booleans.csproj", "{2493D676-5336-4EF1-8ADB-513F74C9F45E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lax.Helpers.EffectiveDateEntity", "src\Lax.Helpers.EffectiveDateEntity\Lax.Helpers.EffectiveDateEntity.csproj", "{6883D90D-10D7-4F93-ADB3-34AFDD68BF8D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lax.Helpers.SoftlyDeletableEntity", "src\Lax.Helpers.SoftlyDeletableEntity\Lax.Helpers.SoftlyDeletableEntity.csproj", "{BBE32286-164A-4037-A744-F5A1A53F47BF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lax.Helpers.TimePeriods", "src\Lax.Helpers.TimePeriods\Lax.Helpers.TimePeriods.csproj", "{58C6F2ED-C2F4-470A-B3F6-784476DC15DB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lax.Helpers.EntityTypeConfigurations", "src\Lax.Helpers.EntityTypeConfigurations\Lax.Helpers.EntityTypeConfigurations.csproj", "{4A8154A8-4B4E-4653-8474-A1ABACB842A8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lax.Helpers.EnumerationMapping", "src\Lax.Helpers.EnumerationMapping\Lax.Helpers.EnumerationMapping.csproj", "{8B0249FB-E9CC-4024-95D9-7A64AA400ACB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lax.Helpers.Reflection.Enumerations", "src\Lax.Helpers.Reflection.Enumerations\Lax.Helpers.Reflection.Enumerations.csproj", "{3198FC7D-D2B5-4EF7-B084-CC23D3E7BE81}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lax.Helpers.Serialization.ByteArrays", "src\Lax.Helpers.Serialization.ByteArrays\Lax.Helpers.Serialization.ByteArrays.csproj", "{A1ADF31C-48DD-4EFE-A8F1-856CE33377D8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lax.Helpers.Serialization.Xml", "src\Lax.Helpers.Serialization.Xml\Lax.Helpers.Serialization.Xml.csproj", "{DE3A6F1B-D6FD-4846-911B-4A0BA2B2F72D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lax.Helpers.StringComparison", "src\Lax.Helpers.StringComparison\Lax.Helpers.StringComparison.csproj", "{CAB236F5-0CFD-463B-A9C7-A3894B2EC939}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lax.Helpers.StringManipulation", "src\Lax.Helpers.StringManipulation\Lax.Helpers.StringManipulation.csproj", "{6DDFF2C8-B768-4D41-8E07-1C2337831DAF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lax.Mvc.AdminLte", "src\Lax.Mvc.AdminLte\Lax.Mvc.AdminLte.csproj", "{FAAD564A-804F-4DF9-BAD8-FF8846732173}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lax.Mvc.Bootstrap", "src\Lax.Mvc.Bootstrap\Lax.Mvc.Bootstrap.csproj", "{C270B504-3657-47DC-9FD0-1A7FEDE4E64C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lax.Mvc.DataTables", "src\Lax.Mvc.DataTables\Lax.Mvc.DataTables.csproj", "{85382DA7-DCD0-460B-87E6-724F9B0BD1C4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lax.Security.Authentication", "src\Lax.Security.Authentication\Lax.Security.Authentication.csproj", "{ED558830-CC78-43C3-8360-2DBE04D7DE1E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lax.Security.Authentication.CustomWindows", "src\Lax.Security.Authentication.CustomWindows\Lax.Security.Authentication.CustomWindows.csproj", "{9236E5FF-6386-4342-B415-F55EE634645F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lax.Security.Claims", "src\Lax.Security.Claims\Lax.Security.Claims.csproj", "{92056324-7652-4959-B170-609825CA265B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lax.Security.Claims.Ldap", "src\Lax.Security.Claims.Ldap\Lax.Security.Claims.Ldap.csproj", "{2DBBFEE7-07EE-463B-962B-957F19262601}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lax.TypeMapper", "src\Lax.TypeMapper\Lax.TypeMapper.csproj", "{E41AFFF9-0C37-45FA-919D-75EFDE53C969}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lax.TypeMapper.AutoMapper", "src\Lax.TypeMapper.AutoMapper\Lax.TypeMapper.AutoMapper.csproj", "{8C945FEA-EA37-49FC-8DBF-12E79BA5DC1B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LaxCommon", "src\LaxCommon\LaxCommon.csproj", "{00EAEE4B-373C-4588-91BC-D8F6D258A3AA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lax.Helpers.PasswordHashing", "src\Lax.Helpers.PasswordHashing\Lax.Helpers.PasswordHashing.csproj", "{EC4A18D4-E485-4783-9E13-0387F245BFF6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lax.Helpers.CryptographicRandomStrings", "src\Lax.Helpers.CryptographicRandomStrings\Lax.Helpers.CryptographicRandomStrings.csproj", "{ED385A54-75D8-42A7-90D9-A933533675F6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lax.Data.Dapper", "src\Lax.Data.Dapper\Lax.Data.Dapper.csproj", "{D0CF04AF-E24D-4E4A-935A-3B88D5D4F311}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lax.Console.Hosting", "src\Lax.Console.Hosting\Lax.Console.Hosting.csproj", "{F017BDD2-277E-436D-A7E8-FF2EB6CDA4C0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lax.Jobs.Abstractions", "src\Lax.Jobs.Abstractions\Lax.Jobs.Abstractions.csproj", "{9545408A-0657-47A9-9219-91702A19F328}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lax.Jobs", "src\Lax.Jobs\Lax.Jobs.csproj", "{BA00D330-3890-4E9F-8766-15ECACCD55B6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lax.Jobs.Runner", "src\Lax.Jobs.Runner\Lax.Jobs.Runner.csproj", "{FF729992-056F-4C5E-BB2A-92EE99BF0006}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lax.Jobs.Runner.Synchronous", "src\Lax.Jobs.Runner.Synchronous\Lax.Jobs.Runner.Synchronous.csproj", "{2CDBE2EB-033B-469F-A0D1-39F39FD36A5F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lax.Helpers.DateTimes", "src\Lax.Helpers.DateTimes\Lax.Helpers.DateTimes.csproj", "{7535CFE7-E5E3-4504-951A-B576F9404530}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lax.Data.EntityFrameworkCore", "src\Lax.Data.EntityFrameworkCore\Lax.Data.EntityFrameworkCore.csproj", "{26FC4D23-FBEB-441E-BD38-A554160B532A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lax.Helpers.Decimals", "src\Lax.Helpers.Decimals\Lax.Helpers.Decimals.csproj", "{FC1E15B7-460C-418C-A145-984E427E09F7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lax.Caching.Namespaced", "src\Lax.Caching.Namespaced\Lax.Caching.Namespaced.csproj", "{59910836-31DB-41F0-8A10-1324DED01CDE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lax.Caching", "src\Lax.Caching\Lax.Caching.csproj", "{71BF17C7-0A9D-4FEB-A39D-D5D8C8A04F1F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lax.Caching.Namespaced.Memory", "src\Lax.Caching.Namespaced.Memory\Lax.Caching.Namespaced.Memory.csproj", "{603ADFFB-6161-43E9-9129-0FF9859FF455}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lax.Data.Repository", "src\Lax.Data.Repository\Lax.Data.Repository.csproj", "{572A4F71-23A7-4616-820E-195C475963DF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lax.Data.Repository.Cached", "src\Lax.Data.Repository.Cached\Lax.Data.Repository.Cached.csproj", "{03488E35-A447-47BF-82D6-22A9C84ADAEE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lax.AspNet.Session.SerializationHelpers.Json", "src\Lax.AspNet.Session.SerializationHelpers.Json\Lax.AspNet.Session.SerializationHelpers.Json.csproj", "{4B72373E-A2EA-418A-BD7C-D10FAF9B2F05}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lax.Mvc.Features", "src\Lax.Mvc.Features\Lax.Mvc.Features.csproj", "{2A13DC0F-80BF-4634-812F-2496722CDF60}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lax.Data.EntityFrameworkCore.Configuration", "src\Lax.Data.EntityFrameworkCore.Configuration\Lax.Data.EntityFrameworkCore.Configuration.csproj", "{B56D097E-8361-42F6-B473-0051042F66D1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lax.Jobs.Hangfire.Autofac", "src\Lax.Jobs.Hangfire.Autofac\Lax.Jobs.Hangfire.Autofac.csproj", "{6B166953-459A-48E3-B089-0935DDF11F66}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -324,6 +323,24 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{FA5CF95A-5D3D-401C-A82B-63789D8A9076} = {5055AF87-1D1F-4C0F-9379-E9099246B009}
+		{0F54BF03-5068-4067-9CBB-A455A61EC5F6} = {5055AF87-1D1F-4C0F-9379-E9099246B009}
+		{487B904F-626C-43CA-A044-953B64BD26AE} = {5055AF87-1D1F-4C0F-9379-E9099246B009}
+		{9AB6DE16-39E5-40D6-B5A2-3B0158831E1E} = {487B904F-626C-43CA-A044-953B64BD26AE}
+		{98996E91-3285-478F-A9DE-A683B6FAD342} = {5055AF87-1D1F-4C0F-9379-E9099246B009}
+		{F83E6E7F-CFE3-49BD-8626-49209AF0CA76} = {5055AF87-1D1F-4C0F-9379-E9099246B009}
+		{B9991AE7-9FBB-4235-8EF0-12674450AC4C} = {F83E6E7F-CFE3-49BD-8626-49209AF0CA76}
+		{B01A26A8-E8C1-491B-BCBF-C52E2B6FE9B3} = {B9991AE7-9FBB-4235-8EF0-12674450AC4C}
+		{E3F6DA29-23CD-4BEC-87B7-B3FB90114FD6} = {F83E6E7F-CFE3-49BD-8626-49209AF0CA76}
+		{D38D3CB6-2A79-4064-91B7-0992FEF729B6} = {5055AF87-1D1F-4C0F-9379-E9099246B009}
+		{A120BB9C-D133-4BEF-AF56-7F5AFBC27376} = {5055AF87-1D1F-4C0F-9379-E9099246B009}
+		{4804EE1D-7C2B-4CEE-B604-718E894FE384} = {5055AF87-1D1F-4C0F-9379-E9099246B009}
+		{AB288308-0E0E-448D-B899-7C9DF9ED6B5F} = {4804EE1D-7C2B-4CEE-B604-718E894FE384}
+		{89425061-36F5-417C-8013-AE97222C0645} = {FA5CF95A-5D3D-401C-A82B-63789D8A9076}
+		{9721EC0B-3989-4DCF-998C-A268CC0FFDC5} = {0F54BF03-5068-4067-9CBB-A455A61EC5F6}
+		{2508AF44-4B16-4658-9C41-89563B553CAA} = {5055AF87-1D1F-4C0F-9379-E9099246B009}
+		{5467B215-66DA-4FD2-8790-8E666A44E9D3} = {0F54BF03-5068-4067-9CBB-A455A61EC5F6}
+		{18B31964-0201-4424-8749-E20C84C66234} = {4804EE1D-7C2B-4CEE-B604-718E894FE384}
 		{8E6F73BD-6210-4897-96FA-541DB5517EE3} = {0F54BF03-5068-4067-9CBB-A455A61EC5F6}
 		{13EF4BFF-692C-4C94-925A-332F424E408F} = {0F54BF03-5068-4067-9CBB-A455A61EC5F6}
 		{BFBCE715-A4B2-46BE-98AF-B64EAF54A35E} = {5055AF87-1D1F-4C0F-9379-E9099246B009}
@@ -348,43 +365,25 @@ Global
 		{E41AFFF9-0C37-45FA-919D-75EFDE53C969} = {D38D3CB6-2A79-4064-91B7-0992FEF729B6}
 		{8C945FEA-EA37-49FC-8DBF-12E79BA5DC1B} = {D38D3CB6-2A79-4064-91B7-0992FEF729B6}
 		{00EAEE4B-373C-4588-91BC-D8F6D258A3AA} = {5055AF87-1D1F-4C0F-9379-E9099246B009}
-		{FA5CF95A-5D3D-401C-A82B-63789D8A9076} = {5055AF87-1D1F-4C0F-9379-E9099246B009}
-		{0F54BF03-5068-4067-9CBB-A455A61EC5F6} = {5055AF87-1D1F-4C0F-9379-E9099246B009}
-		{487B904F-626C-43CA-A044-953B64BD26AE} = {5055AF87-1D1F-4C0F-9379-E9099246B009}
-		{9AB6DE16-39E5-40D6-B5A2-3B0158831E1E} = {487B904F-626C-43CA-A044-953B64BD26AE}
-		{98996E91-3285-478F-A9DE-A683B6FAD342} = {5055AF87-1D1F-4C0F-9379-E9099246B009}
-		{F83E6E7F-CFE3-49BD-8626-49209AF0CA76} = {5055AF87-1D1F-4C0F-9379-E9099246B009}
-		{B9991AE7-9FBB-4235-8EF0-12674450AC4C} = {F83E6E7F-CFE3-49BD-8626-49209AF0CA76}
-		{B01A26A8-E8C1-491B-BCBF-C52E2B6FE9B3} = {B9991AE7-9FBB-4235-8EF0-12674450AC4C}
-		{E3F6DA29-23CD-4BEC-87B7-B3FB90114FD6} = {F83E6E7F-CFE3-49BD-8626-49209AF0CA76}
-		{D38D3CB6-2A79-4064-91B7-0992FEF729B6} = {5055AF87-1D1F-4C0F-9379-E9099246B009}
 		{EC4A18D4-E485-4783-9E13-0387F245BFF6} = {487B904F-626C-43CA-A044-953B64BD26AE}
 		{ED385A54-75D8-42A7-90D9-A933533675F6} = {487B904F-626C-43CA-A044-953B64BD26AE}
 		{D0CF04AF-E24D-4E4A-935A-3B88D5D4F311} = {0F54BF03-5068-4067-9CBB-A455A61EC5F6}
 		{F017BDD2-277E-436D-A7E8-FF2EB6CDA4C0} = {A120BB9C-D133-4BEF-AF56-7F5AFBC27376}
-		{A120BB9C-D133-4BEF-AF56-7F5AFBC27376} = {5055AF87-1D1F-4C0F-9379-E9099246B009}
 		{9545408A-0657-47A9-9219-91702A19F328} = {4804EE1D-7C2B-4CEE-B604-718E894FE384}
-		{4804EE1D-7C2B-4CEE-B604-718E894FE384} = {5055AF87-1D1F-4C0F-9379-E9099246B009}
 		{BA00D330-3890-4E9F-8766-15ECACCD55B6} = {4804EE1D-7C2B-4CEE-B604-718E894FE384}
 		{FF729992-056F-4C5E-BB2A-92EE99BF0006} = {AB288308-0E0E-448D-B899-7C9DF9ED6B5F}
 		{2CDBE2EB-033B-469F-A0D1-39F39FD36A5F} = {AB288308-0E0E-448D-B899-7C9DF9ED6B5F}
-		{AB288308-0E0E-448D-B899-7C9DF9ED6B5F} = {4804EE1D-7C2B-4CEE-B604-718E894FE384}
 		{7535CFE7-E5E3-4504-951A-B576F9404530} = {487B904F-626C-43CA-A044-953B64BD26AE}
 		{26FC4D23-FBEB-441E-BD38-A554160B532A} = {5467B215-66DA-4FD2-8790-8E666A44E9D3}
 		{FC1E15B7-460C-418C-A145-984E427E09F7} = {487B904F-626C-43CA-A044-953B64BD26AE}
 		{59910836-31DB-41F0-8A10-1324DED01CDE} = {89425061-36F5-417C-8013-AE97222C0645}
 		{71BF17C7-0A9D-4FEB-A39D-D5D8C8A04F1F} = {FA5CF95A-5D3D-401C-A82B-63789D8A9076}
-		{89425061-36F5-417C-8013-AE97222C0645} = {FA5CF95A-5D3D-401C-A82B-63789D8A9076}
 		{603ADFFB-6161-43E9-9129-0FF9859FF455} = {89425061-36F5-417C-8013-AE97222C0645}
 		{572A4F71-23A7-4616-820E-195C475963DF} = {9721EC0B-3989-4DCF-998C-A268CC0FFDC5}
 		{03488E35-A447-47BF-82D6-22A9C84ADAEE} = {9721EC0B-3989-4DCF-998C-A268CC0FFDC5}
-		{9721EC0B-3989-4DCF-998C-A268CC0FFDC5} = {0F54BF03-5068-4067-9CBB-A455A61EC5F6}
 		{4B72373E-A2EA-418A-BD7C-D10FAF9B2F05} = {2508AF44-4B16-4658-9C41-89563B553CAA}
-		{2508AF44-4B16-4658-9C41-89563B553CAA} = {5055AF87-1D1F-4C0F-9379-E9099246B009}
 		{2A13DC0F-80BF-4634-812F-2496722CDF60} = {98996E91-3285-478F-A9DE-A683B6FAD342}
 		{B56D097E-8361-42F6-B473-0051042F66D1} = {5467B215-66DA-4FD2-8790-8E666A44E9D3}
-		{5467B215-66DA-4FD2-8790-8E666A44E9D3} = {0F54BF03-5068-4067-9CBB-A455A61EC5F6}
 		{6B166953-459A-48E3-B089-0935DDF11F66} = {18B31964-0201-4424-8749-E20C84C66234}
-		{18B31964-0201-4424-8749-E20C84C66234} = {4804EE1D-7C2B-4CEE-B604-718E894FE384}
 	EndGlobalSection
 EndGlobal
