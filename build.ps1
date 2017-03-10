@@ -51,6 +51,8 @@ function Exec
 
 if(Test-Path .\artifacts) { Remove-Item .\artifacts -Force -Recurse }
 
+& "$PSScriptRoot\dotnet\dotnet-install.ps1" -Channel "rel-1.0.0" -SharedRuntime -Version "1.0.0" -Architecture x64
+
 dotnet -v
 
 exec { & dotnet restore }
