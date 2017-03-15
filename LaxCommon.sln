@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		appveyor.yml = appveyor.yml
 		build.ps1 = build.ps1
+		cli.version = cli.version
+		dotnet-install.ps1 = dotnet-install.ps1
 		Readme.md = Readme.md
 	EndProjectSection
 EndProject
@@ -135,6 +137,16 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lax.Jobs.Hangfire.Autofac", "Lax.Jobs.Hangfire.Autofac\Lax.Jobs.Hangfire.Autofac.csproj", "{6B166953-459A-48E3-B089-0935DDF11F66}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lax.Domain.Common", "Lax.Domain.Common\Lax.Domain.Common.csproj", "{3E9350AF-E224-467E-8063-C7A81F5C16D7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{1FD2E6E2-6989-4640-B96A-9902A3AA1A4B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lax.Domain", "Lax.Domain\Lax.Domain.csproj", "{9F698993-0E95-4AC9-87ED-6DFCDB60D143}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lax.Domain.Events.InMemory", "Lax.Domain.Events.InMemory\Lax.Domain.Events.InMemory.csproj", "{A0B45FB8-4B54-45D8-BA46-399B091E54F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lax.Domain.Events.EventStore", "Lax.Domain.Events.EventStore\Lax.Domain.Events.EventStore.csproj", "{5E4ADDBD-DA56-4364-9E87-87E02CD81202}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Events", "Events", "{7A26E9CD-00C7-403F-B08D-0EC33C465904}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -322,6 +334,18 @@ Global
 		{3E9350AF-E224-467E-8063-C7A81F5C16D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E9350AF-E224-467E-8063-C7A81F5C16D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E9350AF-E224-467E-8063-C7A81F5C16D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F698993-0E95-4AC9-87ED-6DFCDB60D143}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F698993-0E95-4AC9-87ED-6DFCDB60D143}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F698993-0E95-4AC9-87ED-6DFCDB60D143}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F698993-0E95-4AC9-87ED-6DFCDB60D143}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0B45FB8-4B54-45D8-BA46-399B091E54F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0B45FB8-4B54-45D8-BA46-399B091E54F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0B45FB8-4B54-45D8-BA46-399B091E54F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0B45FB8-4B54-45D8-BA46-399B091E54F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E4ADDBD-DA56-4364-9E87-87E02CD81202}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E4ADDBD-DA56-4364-9E87-87E02CD81202}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E4ADDBD-DA56-4364-9E87-87E02CD81202}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E4ADDBD-DA56-4364-9E87-87E02CD81202}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -378,5 +402,10 @@ Global
 		{2A13DC0F-80BF-4634-812F-2496722CDF60} = {98996E91-3285-478F-A9DE-A683B6FAD342}
 		{B56D097E-8361-42F6-B473-0051042F66D1} = {5467B215-66DA-4FD2-8790-8E666A44E9D3}
 		{6B166953-459A-48E3-B089-0935DDF11F66} = {18B31964-0201-4424-8749-E20C84C66234}
+		{3E9350AF-E224-467E-8063-C7A81F5C16D7} = {1FD2E6E2-6989-4640-B96A-9902A3AA1A4B}
+		{9F698993-0E95-4AC9-87ED-6DFCDB60D143} = {1FD2E6E2-6989-4640-B96A-9902A3AA1A4B}
+		{A0B45FB8-4B54-45D8-BA46-399B091E54F9} = {7A26E9CD-00C7-403F-B08D-0EC33C465904}
+		{5E4ADDBD-DA56-4364-9E87-87E02CD81202} = {7A26E9CD-00C7-403F-B08D-0EC33C465904}
+		{7A26E9CD-00C7-403F-B08D-0EC33C465904} = {1FD2E6E2-6989-4640-B96A-9902A3AA1A4B}
 	EndGlobalSection
 EndGlobal

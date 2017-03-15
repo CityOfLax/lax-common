@@ -3,8 +3,8 @@
   <PropertyGroup>
     <VersionPrefix>1.0.0</VersionPrefix>
     <TargetFramework>netstandard1.6</TargetFramework>
-    <AssemblyName>Lax.Domain.Common</AssemblyName>
-    <PackageId>Lax.Domain.Common</PackageId>
+    <AssemblyName>Lax.Domain.Events.InMemory</AssemblyName>
+    <PackageId>Lax.Domain.Events.InMemory</PackageId>
     <NetStandardImplicitPackageVersion>1.6.1</NetStandardImplicitPackageVersion>
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
@@ -12,6 +12,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Lax.Domain.Common\Lax.Domain.Common.csproj" />
     <ProjectReference Include="..\Lax.Domain\Lax.Domain.csproj" />
   </ItemGroup>
 
