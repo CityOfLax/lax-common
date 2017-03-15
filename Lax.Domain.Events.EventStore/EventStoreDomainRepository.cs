@@ -11,24 +11,28 @@ using Newtonsoft.Json;
 namespace Lax.Domain.Events.EventStore {
 
     public class EventStoreDomainRepository : DomainRepositoryBase {
+        
+        private IEventStoreConnection _connection;
 
-        //TODO: Fix this slimeball
-        private readonly IEventStoreConnection _connection;
-        private const string Category = "cqrsshop";
+        private readonly IEventStoreConnectionProvider _connectionProvider;
 
-        public EventStoreDomainRepository(IEventStoreConnection connection) {
-            _connection = connection;
+        public EventStoreDomainRepository(IEventStoreConnectionProvider connectionProvider) {
+            _connectionProvider = connectionProvider;
         }
 
-        private string AggregateToStreamName(Type type, Guid id)
-            => string.Format("{0}-{1}-{2}", Category, type.Name, id);
+        private string AggregateToStreamName(Type type, Guid id) => 
+            string.Format("{0}-{1}", type.Name, id);
+
+        private async Task<IEventStoreConnection> GetConnection() => 
+            _connection ?? (_connection = await _connectionProvider.ProvideConnection());
 
         public override async Task<IEnumerable<IEvent>> Save<TAggregate>(TAggregate aggregate) {
             var events = aggregate.UncommitedEvents().ToList();
             var expectedVersion = CalculateExpectedVersion(aggregate, events);
             var eventData = events.Select(CreateEventData);
             var streamName = AggregateToStreamName(aggregate.GetType(), aggregate.Id);
-            await _connection.AppendToStreamAsync(streamName, expectedVersion, eventData);
+            var connection = await GetConnection();
+            await connection.AppendToStreamAsync(streamName, expectedVersion, eventData);
             return events;
         }
 
@@ -37,10 +41,11 @@ namespace Lax.Domain.Events.EventStore {
             var streamEvents = new List<ResolvedEvent>();
             StreamEventsSlice currentSlice;
             var nextSliceStart = StreamPosition.Start;
+            var connection = await GetConnection();
             do {
-                currentSlice = await _connection.ReadStreamEventsForwardAsync(streamName, nextSliceStart, 4096, false);
+                currentSlice = await connection.ReadStreamEventsForwardAsync(streamName, nextSliceStart, 4096, false);
                 if (currentSlice.Status == SliceReadStatus.StreamNotFound) {
-                    throw new AggregateNotFoundException("Could not found aggregate of type " + typeof(TResult) +
+                    throw new AggregateNotFoundException("Could not find aggregate of type " + typeof(TResult) +
                                                          " and id " + id);
                 }
                 nextSliceStart = currentSlice.NextEventNumber;
@@ -66,9 +71,6 @@ namespace Lax.Domain.Events.EventStore {
             var eventHeaders = new Dictionary<string, string> {
                 {
                     EventClrTypeHeader, @event.GetType().AssemblyQualifiedName
-                },
-                {
-                    "Domain", "Enheter"
                 }
             };
             var eventDataHeaders = SerializeObject(eventHeaders);
