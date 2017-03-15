@@ -109,7 +109,7 @@ $packagesToPublish = @(
 )
 
 foreach ($packageToPublish in $packagesToPublish) {
-    $packageProjectPath = ".\src\" + $packageToPublish
-    exec { & dotnet pack $packageProjectPath -c Release -o ..\..\artifacts --version-suffix=$revision }  
+    $packageProjectPath = ".\" + $packageToPublish
+    exec { & dotnet pack $packageProjectPath -c Release -o ..\artifacts --version-suffix=$revision }  
 }
 
