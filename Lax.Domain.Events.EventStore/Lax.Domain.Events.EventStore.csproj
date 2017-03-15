@@ -12,6 +12,7 @@
   </PropertyGroup>
   
   <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.4.0" />
     <PackageReference Include="EventStore.ClientAPI.NetCore" Version="0.0.1-alpha" />
   </ItemGroup>
 
