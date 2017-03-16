@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Autofac;
 using EventStore.ClientAPI;
 using Lax.Domain.Common;
 using Lax.Domain.Exceptions;
@@ -16,7 +17,10 @@ namespace Lax.Domain.Events.EventStore {
 
         private readonly IEventStoreConnectionProvider _connectionProvider;
 
-        public EventStoreDomainRepository(IEventStoreConnectionProvider connectionProvider) {
+        public EventStoreDomainRepository(
+            IEventStoreConnectionProvider connectionProvider,
+            IComponentContext componentContext) : base(componentContext) {
+
             _connectionProvider = connectionProvider;
         }
 
