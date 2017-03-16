@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using Autofac;
 
 namespace Lax.Domain.Common {
 
-    public class AggregateBase<TAggregateState> : IAggregate where TAggregateState : class, new() {
+    public class AggregateBase<TAggregateState> : IAggregate<TAggregateState> where TAggregateState : class, new() {
 
         public int Version { get; protected set; } = -1;
 
@@ -11,38 +12,30 @@ namespace Lax.Domain.Common {
 
         public TAggregateState State { get; protected set; } = new TAggregateState();
 
-        private readonly List<IEvent> _uncommitedEvents = new List<IEvent>();
+        private readonly List<IEvent<TAggregateState>> _uncommitedEvents = new List<IEvent<TAggregateState>>();
 
-        private readonly Dictionary<Type, AggregateTransitionRouteEntry<TAggregateState>> _transitionRoutes = new Dictionary<Type,AggregateTransitionRouteEntry<TAggregateState>>();
+        private readonly IComponentContext _componentContext;
 
-        public void RaiseEvent(IEvent @event) {
+        protected AggregateBase(IComponentContext componentContext) {
+            _componentContext = componentContext;
+        }
+
+        public void RaiseEvent(IEvent<TAggregateState> @event) {
             ApplyEvent(@event);
             _uncommitedEvents.Add(@event);
         }
 
-        protected void RegisterTransition<TEvent>(
-            Func<TAggregateState, IEvent, TAggregateState> transitionFunc, 
-            bool isCreateTransition = false) where TEvent : IEvent {
-            _transitionRoutes.Add(
-                typeof(TEvent), 
-                new AggregateTransitionRouteEntry<TAggregateState>(
-                    transitionFunc,
-                    isCreateTransition));
-        }
-
-        public void ApplyEvent(IEvent @event) {
-            var eventType = @event.GetType();
-            if (_transitionRoutes.ContainsKey(eventType)) {
-                var routeEntry = _transitionRoutes[eventType];
-                if (routeEntry.IsCreateTransition) {
-                    Id = @event.Id;
-                }
-                State = routeEntry.ApplyTransitionRouteEntry(State, @event);
-            }
+        public void ApplyEvent(IEvent<TAggregateState> @event) {
+            Id = @event.Id;
+            var transition =
+                (ITransition<TAggregateState, IEvent<TAggregateState>>)
+                _componentContext.Resolve(typeof(ITransition<,>).MakeGenericType(typeof(TAggregateState),
+                    typeof(IEvent<TAggregateState>)));
+            State = transition.Apply(State, @event);
             Version++;
         }
 
-        public IEnumerable<IEvent> UncommitedEvents() => _uncommitedEvents;
+        public IEnumerable<IEvent<TAggregateState>> UncommitedEvents() => _uncommitedEvents;
 
         public void ClearUncommitedEvents() {
             _uncommitedEvents.Clear();

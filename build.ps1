@@ -79,7 +79,7 @@ $packagesToPublish = @(
 	"Lax.Domain",
 	"Lax.Domain.Common",
 	"Lax.Domain.Events.EventStore",
-	"Lax.Domain.Events.InMemory",
+	#"Lax.Domain.Events.InMemory",
     "Lax.Helpers.Booleans",
     "Lax.Helpers.CryptographicRandomStrings",
     "Lax.Helpers.DateTimes",

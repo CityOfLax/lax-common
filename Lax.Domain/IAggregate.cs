@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace Lax.Domain {
 
-    public interface IAggregate {
+    public interface IAggregate<TAggregateState> where TAggregateState : class, new() {
 
-        IEnumerable<IEvent> UncommitedEvents();
+        IEnumerable<IEvent<TAggregateState>> UncommitedEvents();
 
         void ClearUncommitedEvents();
 
@@ -13,7 +13,9 @@ namespace Lax.Domain {
 
         Guid Id { get; }
 
-        void ApplyEvent(IEvent @event);
+        TAggregateState State { get; }
+
+        void ApplyEvent(IEvent<TAggregateState> @event);
 
     }
 

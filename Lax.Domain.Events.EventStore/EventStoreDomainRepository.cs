@@ -26,7 +26,7 @@ namespace Lax.Domain.Events.EventStore {
         private async Task<IEventStoreConnection> GetConnection() => 
             _connection ?? (_connection = await _connectionProvider.ProvideConnection());
 
-        public override async Task<IEnumerable<IEvent>> Save<TAggregate>(TAggregate aggregate) {
+        public override async Task<IEnumerable<IEvent<TAggregateState>>> Save<TAggregate, TAggregateState>(TAggregate aggregate) {
             var events = aggregate.UncommitedEvents().ToList();
             var expectedVersion = CalculateExpectedVersion(aggregate, events);
             var eventData = events.Select(CreateEventData);
@@ -36,8 +36,8 @@ namespace Lax.Domain.Events.EventStore {
             return events;
         }
 
-        public override async Task<TResult> GetById<TResult>(Guid id) {
-            var streamName = AggregateToStreamName(typeof(TResult), id);
+        public override async Task<TAggregate> GetById<TAggregate, TAggregateState>(Guid id) {
+            var streamName = AggregateToStreamName(typeof(TAggregate), id);
             var streamEvents = new List<ResolvedEvent>();
             StreamEventsSlice currentSlice;
             var nextSliceStart = StreamPosition.Start;
@@ -45,7 +45,7 @@ namespace Lax.Domain.Events.EventStore {
             do {
                 currentSlice = await connection.ReadStreamEventsForwardAsync(streamName, nextSliceStart, 4096, false);
                 if (currentSlice.Status == SliceReadStatus.StreamNotFound) {
-                    throw new AggregateNotFoundException("Could not find aggregate of type " + typeof(TResult) +
+                    throw new AggregateNotFoundException("Could not find aggregate of type " + typeof(TAggregate) +
                                                          " and id " + id);
                 }
                 nextSliceStart = currentSlice.NextEventNumber;
@@ -55,9 +55,9 @@ namespace Lax.Domain.Events.EventStore {
             var deserializedEvents = streamEvents.Select(e => {
                 var metadata = DeserializeObject<Dictionary<string, string>>(e.OriginalEvent.Metadata);
                 var eventData = DeserializeObject(e.OriginalEvent.Data, metadata[EventClrTypeHeader]);
-                return eventData as IEvent;
+                return eventData as IEvent<TAggregateState>;
             });
-            return BuildAggregate<TResult>(deserializedEvents);
+            return BuildAggregate<TAggregate, TAggregateState>(deserializedEvents);
         }
 
         private T DeserializeObject<T>(byte[] data) => (T) (DeserializeObject(data, typeof(T).AssemblyQualifiedName));
