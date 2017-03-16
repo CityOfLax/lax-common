@@ -2,7 +2,7 @@
 
 namespace Lax.Domain.Common {
 
-    public class AggregateFactory<TAggregate, TAggregateState, TEvent> : IAggregateFactory<TAggregate, TAggregateState, TEvent> where TEvent : IEvent<TAggregateState> where TAggregateState : class, new() where TAggregate : IAggregate<TAggregateState> {
+    public class AggregateFactory<TAggregate, TAggregateState, TEvent> : IAggregateFactory<TAggregate, TAggregateState, TEvent> where TEvent : IEvent where TAggregateState : class, new() where TAggregate : IAggregate<TAggregateState> {
 
         private readonly Func<TEvent, TAggregate> _aggregateCreationFunc;
 
