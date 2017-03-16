@@ -57,10 +57,10 @@ $dotnetVersion = Get-Content $dotnetVersionFile
 
 & "$PSScriptRoot\dotnet-install.ps1" -Channel $dotnetChannel -Version $dotnetVersion -Architecture x64
 
-exec { & dotnet restore }
-
 $revision = @{ $true = $env:APPVEYOR_BUILD_NUMBER; $false = 1 }[$env:APPVEYOR_BUILD_NUMBER -ne $NULL];
 $revision = "CI{0:D4}" -f [convert]::ToInt32($revision, 10)
+
+exec { & dotnet restore /p:VersionSuffix=$revision }
 
 $packagesToPublish = @(
 	"Lax.AspNet.Session.SerializationHelpers.Json",
