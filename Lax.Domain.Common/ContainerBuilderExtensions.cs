@@ -19,8 +19,8 @@ namespace Lax.Domain.Common {
             builder.RegisterTypesInAssembliesImplementingInterfaceAsInterface(typeof(ITransition<,>), assemblies);
 
             // Register Generic Aggregate Factory
-            builder.RegisterGeneric(typeof(AggregateFactory<,,>))
-                .As(typeof(IAggregateFactory<,,>))
+            builder.RegisterGeneric(typeof(AggregateFactory<,>))
+                .As(typeof(IAggregateFactory<,>))
                 .InstancePerDependency();
 
         }
