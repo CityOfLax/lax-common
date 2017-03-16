@@ -14,7 +14,7 @@ namespace Lax.Domain.Common {
             return expectedVersion;
         }
 
-        protected TResult BuildAggregate<TResult, TAggregateState>(IEnumerable<IEvent<TAggregateState>> events) where TResult : IAggregate<TAggregateState>, new() where TAggregateState : class, new() {
+        protected TResult BuildAggregate<TResult, TAggregateState>(IEnumerable<IEvent> events) where TResult : IAggregate<TAggregateState>, new() where TAggregateState : class, new() {
             var result = new TResult();
             foreach (var @event in events) {
                 result.ApplyEvent(@event);
@@ -22,7 +22,7 @@ namespace Lax.Domain.Common {
             return result;
         }
 
-        public abstract Task<IEnumerable<IEvent<TAggregateState>>> Save<TAggregate, TAggregateState>(TAggregate aggregate)
+        public abstract Task<IEnumerable<IEvent>> Save<TAggregate, TAggregateState>(TAggregate aggregate)
             where TAggregate : IAggregate<TAggregateState> where TAggregateState : class, new();
 
     }

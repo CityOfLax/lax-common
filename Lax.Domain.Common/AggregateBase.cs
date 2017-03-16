@@ -12,7 +12,7 @@ namespace Lax.Domain.Common {
 
         public TAggregateState State { get; protected set; } = new TAggregateState();
 
-        private readonly List<IEvent<TAggregateState>> _uncommitedEvents = new List<IEvent<TAggregateState>>();
+        private readonly List<IEvent> _uncommitedEvents = new List<IEvent>();
 
         private readonly IComponentContext _componentContext;
 
@@ -20,22 +20,22 @@ namespace Lax.Domain.Common {
             _componentContext = componentContext;
         }
 
-        public void RaiseEvent(IEvent<TAggregateState> @event) {
+        public void RaiseEvent(IEvent @event) {
             ApplyEvent(@event);
             _uncommitedEvents.Add(@event);
         }
 
-        public void ApplyEvent(IEvent<TAggregateState> @event) {
+        public void ApplyEvent(IEvent @event) {
             Id = @event.Id;
             var transition =
-                (ITransition<TAggregateState, IEvent<TAggregateState>>)
+                (ITransition<TAggregateState, IEvent>)
                 _componentContext.Resolve(typeof(ITransition<,>).MakeGenericType(typeof(TAggregateState),
-                    typeof(IEvent<TAggregateState>)));
+                    typeof(IEvent)));
             State = transition.Apply(State, @event);
             Version++;
         }
 
-        public IEnumerable<IEvent<TAggregateState>> UncommitedEvents() => _uncommitedEvents;
+        public IEnumerable<IEvent> UncommitedEvents() => _uncommitedEvents;
 
         public void ClearUncommitedEvents() {
             _uncommitedEvents.Clear();

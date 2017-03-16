@@ -26,7 +26,7 @@ namespace Lax.Domain.Events.EventStore {
         private async Task<IEventStoreConnection> GetConnection() => 
             _connection ?? (_connection = await _connectionProvider.ProvideConnection());
 
-        public override async Task<IEnumerable<IEvent<TAggregateState>>> Save<TAggregate, TAggregateState>(TAggregate aggregate) {
+        public override async Task<IEnumerable<IEvent>> Save<TAggregate, TAggregateState>(TAggregate aggregate) {
             var events = aggregate.UncommitedEvents().ToList();
             var expectedVersion = CalculateExpectedVersion(aggregate, events);
             var eventData = events.Select(CreateEventData);
@@ -55,7 +55,7 @@ namespace Lax.Domain.Events.EventStore {
             var deserializedEvents = streamEvents.Select(e => {
                 var metadata = DeserializeObject<Dictionary<string, string>>(e.OriginalEvent.Metadata);
                 var eventData = DeserializeObject(e.OriginalEvent.Data, metadata[EventClrTypeHeader]);
-                return eventData as IEvent<TAggregateState>;
+                return eventData as IEvent;
             });
             return BuildAggregate<TAggregate, TAggregateState>(deserializedEvents);
         }

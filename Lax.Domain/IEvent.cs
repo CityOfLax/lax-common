@@ -2,7 +2,7 @@
 
 namespace Lax.Domain {
 
-    public interface IEvent<TAggregateState> where TAggregateState : class, new() {
+    public interface IEvent {
 
         Guid Id { get; }
 

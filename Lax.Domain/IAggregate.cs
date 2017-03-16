@@ -5,7 +5,7 @@ namespace Lax.Domain {
 
     public interface IAggregate<TAggregateState> where TAggregateState : class, new() {
 
-        IEnumerable<IEvent<TAggregateState>> UncommitedEvents();
+        IEnumerable<IEvent> UncommitedEvents();
 
         void ClearUncommitedEvents();
 
@@ -15,7 +15,7 @@ namespace Lax.Domain {
 
         TAggregateState State { get; }
 
-        void ApplyEvent(IEvent<TAggregateState> @event);
+        void ApplyEvent(IEvent @event);
 
     }
 
