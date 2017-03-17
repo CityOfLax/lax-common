@@ -30,7 +30,7 @@ namespace Lax.Domain.Common {
             var transition =
                 (ITransition<TAggregateState, IEvent>)
                 _componentContext.Resolve(typeof(ITransition<,>).MakeGenericType(typeof(TAggregateState),
-                    typeof(IEvent)));
+                    @event.GetType()));
             State = transition.Apply(State, @event);
             Version++;
         }
