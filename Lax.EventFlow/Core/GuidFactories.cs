@@ -101,6 +101,7 @@ namespace Lax.EventFlow.Core {
             }
 
             public static Guid Create(Guid namespaceId, byte[] nameBytes) {
+
                 // Always use version 5 (version 3 is MD5, version 5 is SHA1)
                 const int version = 5;
 
@@ -111,14 +112,16 @@ namespace Lax.EventFlow.Core {
                 var namespaceBytes = namespaceId.ToByteArray();
                 SwapByteOrder(namespaceBytes);
 
-                // Comput the hash of the name space ID concatenated with the name (step 4)
-                var hash = new byte[] {};
+                // Concatentate the name space ID with the name (step 4a)
+                var concatenatedBytesLength = namespaceBytes.Length + nameBytes.Length;
+                var concatenatedBytes = new byte[concatenatedBytesLength];
+                namespaceBytes.CopyTo(concatenatedBytes, 0);
+                nameBytes.CopyTo(concatenatedBytes, namespaceBytes.Length);
+
+                // Compute the hash of the name space ID concatenated with the name (step 4b)
+                byte[] hash;
                 using (var algorithm = SHA1.Create()) {
-                    /*
-                    algorithm.TransformBlock(namespaceBytes, 0, namespaceBytes.Length, null, 0);
-                    algorithm.TransformFinalBlock(nameBytes, 0, nameBytes.Length);
-                    hash = algorithm.Hash;
-                    */
+                    hash = algorithm.ComputeHash(concatenatedBytes);
                 }
 
                 // Most bytes from the hash are copied straight to the bytes of the new
@@ -128,11 +131,11 @@ namespace Lax.EventFlow.Core {
 
                 // Set the four most significant bits (bits 12 through 15) of the time_hi_and_version
                 // field to the appropriate 4-bit version number from Section 4.1.3 (step 8)
-                newGuid[6] = (byte) ((newGuid[6] & 0x0F) | (version << 4));
+                newGuid[6] = (byte)((newGuid[6] & 0x0F) | (version << 4));
 
                 // Set the two most significant bits (bits 6 and 7) of the clock_seq_hi_and_reserved
                 // to zero and one, respectively (step 10)
-                newGuid[8] = (byte) ((newGuid[8] & 0x3F) | 0x80);
+                newGuid[8] = (byte)((newGuid[8] & 0x3F) | 0x80);
 
                 // Convert the resulting UUID to local byte order (step 13)
                 SwapByteOrder(newGuid);
