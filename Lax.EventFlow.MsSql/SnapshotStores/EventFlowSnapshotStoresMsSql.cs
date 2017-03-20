@@ -33,7 +33,7 @@ namespace Lax.EventFlow.MsSql.SnapshotStores {
         public static Assembly Assembly { get; } = typeof(EventFlowSnapshotStoresMsSql).GetTypeInfo().Assembly;
 
         public static IEnumerable<SqlScript> GetSqlScripts() {
-            return Assembly.GetEmbeddedSqlScripts("EventFlow.MsSql.SnapshotStores.Scripts");
+            return Assembly.GetEmbeddedSqlScripts("Lax.EventFlow.MsSql.SnapshotStores.Scripts");
         }
 
         public static void MigrateDatabase(IMsSqlDatabaseMigrator msSqlDatabaseMigrator) {
