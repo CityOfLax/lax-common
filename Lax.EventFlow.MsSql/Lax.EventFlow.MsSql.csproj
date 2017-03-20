@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <VersionPrefix>1.0.0</VersionPrefix>
+    <TargetFramework>netstandard1.6</TargetFramework>
+    <AssemblyName>Lax.EventFlow.MsSql</AssemblyName>
+    <PackageId>Lax.EventFlow.MsSql</PackageId>
+    <NetStandardImplicitPackageVersion>1.6.1</NetStandardImplicitPackageVersion>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+    <PackageReference Include="Dapper" Version="1.50.2" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <EmbeddedResource Include="EventStores\Scripts\0001 - Create table EventFlow.sql" />
+    <EmbeddedResource Include="EventStores\Scripts\0002 - Create eventdatamodel_list_type.sql" />
+    <EmbeddedResource Include="SnapshotStores\Scripts\0001 - Create EventFlowSnapshots.sql" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Lax.EventFlow.Sql\Lax.EventFlow.Sql.csproj" />
+    <ProjectReference Include="..\Lax.EventFlow\Lax.EventFlow.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <VersionPrefix>1.0.0</VersionPrefix>
+    <TargetFramework>netstandard1.6</TargetFramework>
+    <AssemblyName>Lax.EventFlow.Sql</AssemblyName>
+    <PackageId>Lax.EventFlow.Sql</PackageId>
+    <NetStandardImplicitPackageVersion>1.6.1</NetStandardImplicitPackageVersion>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+    <PackageReference Include="Dapper" Version="1.50.2" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="4.3.0" />
+    <PackageReference Include="dbup4-core" Version="4.0.0-beta0003" />
+    <PackageReference Include="dbup4-sqlserver" Version="4.0.0-beta0003" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Lax.EventFlow\Lax.EventFlow.csproj" />
+  </ItemGroup>
+
+</Project>
