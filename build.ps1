@@ -94,6 +94,7 @@ $packagesToPublish = @(
     "Lax.Helpers.Serialization.ByteArrays",
     "Lax.Helpers.Serialization.Xml",
     "Lax.Helpers.SoftlyDeletableEntity",
+	"Lax.Helpers.StringBuilderExtensions",
     "Lax.Helpers.StringComparison",
     "Lax.Helpers.StringManipulation",
     "Lax.Helpers.TimePeriods",

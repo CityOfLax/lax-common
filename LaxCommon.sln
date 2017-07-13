@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26228.9
+VisualStudioVersion = 15.0.26430.15
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E06DB61D-52A4-4DB4-B2EC-CA2D3FE6A18D}"
 	ProjectSection(SolutionItems) = preProject
@@ -136,19 +136,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lax.Data.EntityFrameworkCor
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lax.Jobs.Hangfire.Autofac", "Lax.Jobs.Hangfire.Autofac\Lax.Jobs.Hangfire.Autofac.csproj", "{6B166953-459A-48E3-B089-0935DDF11F66}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lax.EventFlow", "Lax.EventFlow\Lax.EventFlow.csproj", "{9D95043C-5142-4FD0-B346-E244807261A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lax.EventFlow", "Lax.EventFlow\Lax.EventFlow.csproj", "{9D95043C-5142-4FD0-B346-E244807261A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lax.EventFlow.Sql", "Lax.EventFlow.Sql\Lax.EventFlow.Sql.csproj", "{87BCD9EA-43DB-42DF-8BF6-18FE639EDC39}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lax.EventFlow.Sql", "Lax.EventFlow.Sql\Lax.EventFlow.Sql.csproj", "{87BCD9EA-43DB-42DF-8BF6-18FE639EDC39}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lax.EventFlow.MsSql", "Lax.EventFlow.MsSql\Lax.EventFlow.MsSql.csproj", "{5F6A960E-D099-475C-98C9-D16B378AE121}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lax.EventFlow.MsSql", "Lax.EventFlow.MsSql\Lax.EventFlow.MsSql.csproj", "{5F6A960E-D099-475C-98C9-D16B378AE121}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EventFlow", "EventFlow", "{F9964BA4-9D48-4A29-9E36-A24324AFACE1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lax.EventFlow.AutoFac", "Lax.EventFlow.AutoFac\Lax.EventFlow.AutoFac.csproj", "{259258DC-5D0B-44C1-83A1-4DA5469C51D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lax.EventFlow.AutoFac", "Lax.EventFlow.AutoFac\Lax.EventFlow.AutoFac.csproj", "{259258DC-5D0B-44C1-83A1-4DA5469C51D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lax.EventFlow.ElasticSearch", "Lax.EventFlow.ElasticSearch\Lax.EventFlow.ElasticSearch.csproj", "{712B161C-29F0-405B-AE9F-D580395190BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lax.EventFlow.ElasticSearch", "Lax.EventFlow.ElasticSearch\Lax.EventFlow.ElasticSearch.csproj", "{712B161C-29F0-405B-AE9F-D580395190BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lax.EventFlow.RabbitMQ", "Lax.EventFlow.RabbitMQ\Lax.EventFlow.RabbitMQ.csproj", "{4ED1F5CF-9036-4562-9D3E-95C2BC409B0D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lax.EventFlow.RabbitMQ", "Lax.EventFlow.RabbitMQ\Lax.EventFlow.RabbitMQ.csproj", "{4ED1F5CF-9036-4562-9D3E-95C2BC409B0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lax.Helpers.StringBuilderExtensions", "Lax.Helpers.StringBuilderExtensions\Lax.Helpers.StringBuilderExtensions.csproj", "{1F6B6032-7E0D-4520-A4C6-D095F46937C9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -356,6 +358,10 @@ Global
 		{4ED1F5CF-9036-4562-9D3E-95C2BC409B0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4ED1F5CF-9036-4562-9D3E-95C2BC409B0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4ED1F5CF-9036-4562-9D3E-95C2BC409B0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F6B6032-7E0D-4520-A4C6-D095F46937C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F6B6032-7E0D-4520-A4C6-D095F46937C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F6B6032-7E0D-4520-A4C6-D095F46937C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F6B6032-7E0D-4520-A4C6-D095F46937C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -418,5 +424,6 @@ Global
 		{259258DC-5D0B-44C1-83A1-4DA5469C51D0} = {F9964BA4-9D48-4A29-9E36-A24324AFACE1}
 		{712B161C-29F0-405B-AE9F-D580395190BF} = {F9964BA4-9D48-4A29-9E36-A24324AFACE1}
 		{4ED1F5CF-9036-4562-9D3E-95C2BC409B0D} = {F9964BA4-9D48-4A29-9E36-A24324AFACE1}
+		{1F6B6032-7E0D-4520-A4C6-D095F46937C9} = {487B904F-626C-43CA-A044-953B64BD26AE}
 	EndGlobalSection
 EndGlobal
