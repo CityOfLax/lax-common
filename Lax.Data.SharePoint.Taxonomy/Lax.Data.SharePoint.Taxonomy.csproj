@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Foundatio" Version="5.1.1474" />
+    <PackageReference Include="Microsoft.SharePoint2016.CSOM" Version="16.0.4351.1000" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Lax.Data.SharePoint.Abstractions\Lax.Data.SharePoint.Abstractions.csproj" />
+    <ProjectReference Include="..\Lax.Data.SharePoint.Lists\Lax.Data.SharePoint.Lists.csproj" />
+  </ItemGroup>
+
+</Project>
