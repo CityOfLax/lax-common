@@ -51,11 +51,11 @@ function Exec
 
 if(Test-Path .\artifacts) { Remove-Item .\artifacts -Force -Recurse }
 
-$dotnetVersionFile = $PSScriptRoot + "\cli.version"
-$dotnetChannel = "rel-2.0.0"
-$dotnetVersion = Get-Content $dotnetVersionFile
+#$dotnetVersionFile = $PSScriptRoot + "\cli.version"
+#$dotnetChannel = "rel-2.0.0"
+#$dotnetVersion = Get-Content $dotnetVersionFile
 
-& "$PSScriptRoot\dotnet-install.ps1" -Channel $dotnetChannel -Version $dotnetVersion -Architecture x64
+#& "$PSScriptRoot\dotnet-install.ps1" -Channel $dotnetChannel -Version $dotnetVersion -Architecture x64
 
 $revision = @{ $true = $env:APPVEYOR_BUILD_NUMBER; $false = 1 }[$env:APPVEYOR_BUILD_NUMBER -ne $NULL];
 $revision = "CI{0:D4}" -f [convert]::ToInt32($revision, 10)
