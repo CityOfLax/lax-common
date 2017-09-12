@@ -47,7 +47,7 @@
 #>
 [cmdletbinding()]
 param(
-   [string]$Channel="rel-1.0.0",
+   [string]$Channel="rel-2.0.0",
    [string]$Version="Latest",
    [string]$InstallDir="<auto>",
    [string]$Architecture="<auto>",
